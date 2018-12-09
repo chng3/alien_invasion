@@ -21,11 +21,10 @@ def run_game():
 	while True:
 		
 		# 监视键盘和鼠标事件
-		gf.check_events()
-
+		gf.check_events(ship)
+		ship.update()
 		# 每次循环时都重绘屏幕
 		# 让最近绘制的屏幕可见
 		gf.update_screen(ai_settings, screen, ship)
-		
 		
 run_game()
