@@ -1,5 +1,4 @@
 import sys
-
 import pygame
 
 from settings import Settings 
@@ -27,9 +26,9 @@ def run_game():
 		# 监视键盘和鼠标事件
 		gf.check_events(ai_settings, screen, ship, bullets)
 		ship.update()
-		bullets.update()
 		# 每次循环时都重绘屏幕
 		# 让最近绘制的屏幕可见
+		gf.update_bullets(bullets)
 		gf.update_screen(ai_settings, screen, ship, bullets)
 		
 run_game()
