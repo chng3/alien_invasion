@@ -22,12 +22,12 @@ class Bullet(Sprite):
         self.speed_factor = ai_settings.bullet_speed_factor
 
     def update(self):
-        """Move the bullet up the screen."""
+        """向上移动子弹."""
         # Update the decimal position of the bullet.
         self.y -= self.speed_factor
         # Update the rect position.
         self.rect.y = self.y
 
     def draw_bullet(self):
-        """Draw the bullet to the screen."""
+        """在屏幕上绘制子弹."""
         pygame.draw.rect(self.screen, self.color, self.rect)
